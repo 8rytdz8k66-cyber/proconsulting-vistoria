@@ -417,6 +417,35 @@
   .wa-go.off{background:#b9c0d4!important;cursor:pointer}
   .fab{border:0;font:inherit;cursor:pointer}
   @media(max-width:720px){.fab{width:56px;height:56px;padding:0;justify-content:center;border-radius:50%}.fab span{display:none}.fab svg{width:28px;height:28px}}
+
+  /* ===== preços ===== */
+  #precos{background:var(--cinza)}
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+  .plan{position:relative;background:#fff;border:1px solid var(--cinza-2);border-radius:20px;padding:34px;display:flex;flex-direction:column;box-shadow:0 20px 50px -34px rgba(14,15,40,.35)}
+  .plan.dark{background:var(--azul-escuro);color:#fff;border-color:var(--azul-escuro)}
+  .ptag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);background:rgba(42,62,244,.08);border-radius:999px;padding:6px 12px}
+  .plan.dark .ptag{color:#fff;background:var(--azul)}
+  .plan h3{font-size:26px;letter-spacing:-.02em;margin-top:16px}
+  .pdesc{color:var(--texto);margin-top:6px}
+  .plan.dark .pdesc{color:rgba(255,255,255,.7)}
+  .price{font-size:56px;font-weight:800;letter-spacing:-.04em;line-height:1;margin:24px 0 22px;display:flex;align-items:flex-start;gap:6px}
+  .price small{font-size:20px;font-weight:700;margin-top:8px;letter-spacing:0}
+  .price span{font-size:22px;margin-top:6px;letter-spacing:0;opacity:.6}
+  .plan ul{list-style:none;display:grid;gap:12px;margin-bottom:28px}
+  .plan li{display:flex;gap:12px;font-size:15.5px;line-height:1.45}
+  .plan li i{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:rgba(42,62,244,.1);color:var(--azul);display:grid;place-items:center;margin-top:1px}
+  .plan.dark li i{background:rgba(141,153,255,.18);color:var(--azul-claro)}
+  .plan li i svg{width:13px;height:13px}
+  .plan .btn{margin-top:auto;justify-content:center}
+  .pinfo2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;margin-top:20px}
+  .pinfo2 > div{background:#fff;border:1px solid var(--cinza-2);border-radius:16px;padding:24px}
+  .pinfo2 h4{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--azul);margin-bottom:14px}
+  .paychips{display:flex;flex-wrap:wrap;gap:8px}
+  .paychips span{font-size:14.5px;font-weight:600;padding:9px 14px;border-radius:999px;background:var(--cinza);border:1px solid var(--cinza-2)}
+  .paychips em{font-style:normal;font-weight:500;color:var(--texto)}
+  .area p{color:var(--texto);line-height:1.55}
+  .area b{color:var(--preto)}
+  @media(max-width:860px){.plans,.pinfo2{grid-template-columns:1fr}.plan{padding:26px}.price{font-size:48px}}
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
 </style>
@@ -432,7 +461,7 @@
       <a href="#vistoria">Vistoria</a>
       <a href="#raio-x">Raio-x</a>
       <a href="#busca">Busca do carro</a>
-      <a href="#servicos">Serviços</a>
+      <a href="#precos">Preços</a>
       <a href="#contato">Contato</a>
     </nav>
   </div>
@@ -449,14 +478,14 @@
           <span class="tag"><i></i>Fundador<em class="tg2"> · ProConsulting</em></span>
           <h1>Kauê Mesquita</h1>
           <div class="role">Especialista em vistoria e consultoria automotiva</div>
-          <p class="meta">Há quase sete anos ajudando gente a comprar carro sem cair em cilada. Você escolhe o carro, eu analiso tudo como se fosse pra mim ou pra alguém da minha família.</p>
+          <p class="meta">Há 8 anos ajudando gente a comprar carro sem cair em cilada, com mais de 4.000 vistorias feitas. Você escolhe o carro, eu analiso tudo como se fosse pra mim ou pra alguém da minha família.</p>
         </div>
-        <p class="pmeta-m">Há quase sete anos ajudando gente a comprar carro sem cair em cilada. Você escolhe o carro, eu analiso tudo como se fosse pra mim ou pra alguém da minha família.</p>
+        <p class="pmeta-m">Há 8 anos ajudando gente a comprar carro sem cair em cilada, com mais de 4.000 vistorias feitas. Você escolhe o carro, eu analiso tudo como se fosse pra mim ou pra alguém da minha família.</p>
         <div class="pfoot">
           <div class="pstats">
-            <div><b>~7 anos</b><span>de experiência</span></div>
-            <div><b>8 áreas</b><span>checadas na vistoria</span></div>
-            <div><b>Fotos + vídeos</b><span>em todo laudo</span></div>
+            <div><b>8 anos</b><span>de experiência</span></div>
+            <div><b>+4.000</b><span>vistorias feitas</span></div>
+            <div><b>Laudo na hora</b><span>com fotos e vídeos</span></div>
           </div>
           <span class="popen">Ver especialidades <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
@@ -499,11 +528,9 @@
     <label class="fld"><span>Seu nome</span><input id="waName" type="text" autocomplete="given-name" placeholder="Ex.: Pedro" maxlength="40"></label>
     <div class="fld"><span>Você precisa de</span>
       <div class="svc" id="waSvc">
-        <button type="button" data-v="Vistoria pré-compra">Vistoria</button>
-        <button type="button" data-v="Busca personalizada">Busca do carro</button>
-        <button type="button" data-v="Consultoria na compra">Consultoria</button>
-        <button type="button" data-v="Intermediação">Intermediação</button>
-        <button type="button" data-v="">Ainda não sei</button>
+        <button type="button" data-v="Vistoria Pré-Compra (R$ 749)">Vistoria · R$ 749</button>
+        <button type="button" data-v="Consultoria de Busca (R$ 1.499)">Consultoria de Busca · R$ 1.499</button>
+                        <button type="button" data-v="">Ainda não sei</button>
       </div>
     </div>
     <p class="wa-err" id="waErr">Digita seu nome pra continuar 😉</p>
@@ -531,7 +558,7 @@
     </div>
     <figure class="vimg reveal">
       <img src="ext_frente.jpg" alt="VW Taos branco">
-      <figcaption><b>Laudo completo</b><span>com fotos e vídeos de cada ponto</span></figcaption>
+      <figcaption><b>Laudo na hora</b><span>com fotos e vídeos de cada ponto</span></figcaption>
     </figure>
   </div>
 </section>
@@ -568,8 +595,8 @@
     </div>
     <div class="receive reveal">
       <div>
-        <span class="label">Após a finalização do serviço, você receberá:</span>
-        <p>E eu explico cada ponto com você antes de você decidir.</p>
+        <span class="label">Ao final da vistoria, na hora, você recebe:</span>
+        <p>A vistoria leva de 2 a 3 horas, no local onde o carro está. No final eu explico cada ponto com você antes de você decidir.</p>
       </div>
       <ul>
         <li><span class="ck"></span>Laudo completo, explicando cada ponto importante.</li>
@@ -577,7 +604,7 @@
         <li><span class="ck"></span>Link com todas as fotos e vídeos da avaliação.</li>
       </ul>
     </div>
-    <div style="margin-top:28px" class="reveal"><button type="button" class="btn primary wa-open" data-svc="Vistoria pré-compra">Agendar minha vistoria →</button></div>
+    <div style="margin-top:28px" class="reveal"><button type="button" class="btn primary wa-open" data-svc="Vistoria Pré-Compra (R$ 749)">Agendar minha vistoria →</button></div>
   </div>
 </section>
 
@@ -585,7 +612,7 @@
 <!-- BUSCA -->
 <section class="busca" id="busca">
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--azul-claro)">Busca personalizada</div>
+    <div class="eyebrow" style="color:var(--azul-claro)">Consultoria de Busca</div>
     <h2>Você diz o carro. Eu encontro.</h2>
     <p class="lead">Nada de passar fim de semana rodando loja e perdendo tempo com carro ruim.</p>
     <div class="bsteps">
@@ -597,24 +624,38 @@
   </div>
 </section>
 
-<!-- OUTROS -->
-<section id="servicos">
+<!-- PREÇOS -->
+<section id="precos">
   <div class="wrap">
-    <div class="eyebrow">Outros serviços</div>
-    <h2>Suporte em todas as etapas da compra.</h2>
-    <div class="grid">
-      <article class="card reveal">
-        <span class="n">CONSULTORIA</span>
-        <h3>Consultoria na compra</h3>
-        <p>Orientação especializada pra você decidir com segurança, sem pressão e sem surpresa.</p>
-        <ul><li>Entendimento da sua necessidade real</li><li>Comunicação clara e objetiva</li><li>Suporte em cada etapa</li></ul>
+    <div class="eyebrow">Preços</div>
+    <h2>Investimento pequeno perto do prejuízo de um carro ruim.</h2>
+    <div class="plans">
+      <article class="plan reveal">
+        <span class="ptag">Já escolheu o carro</span>
+        <h3>Vistoria Pré-Compra</h3>
+        <p class="pdesc">Você já escolheu o carro e quer saber se vale a pena.</p>
+        <div class="price"><small>R$</small>749<span>,00</span></div>
+        <ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>Análise completa: estrutura, pintura, enchente, mecânica, elétrica e documentação</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>Vou até o carro, em loja ou particular</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>De 2 a 3 horas de vistoria</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>Laudo e relatório na hora, com fotos e vídeos</li></ul>
+        <button type="button" class="btn primary wa-open" data-svc="Vistoria Pré-Compra (R$ 749)">Agendar vistoria →</button>
       </article>
-      <article class="card reveal">
-        <span class="n">INTERMEDIAÇÃO</span>
-        <h3>Intermediação</h3>
-        <p>Eu fico do seu lado na negociação pra que tudo seja transparente e seguro.</p>
-        <ul><li>Conexão com lojas parceiras</li><li>Negociação acompanhada</li><li>Segurança do início ao fim</li></ul>
+      <article class="plan dark reveal">
+        <span class="ptag">Do zero até a chave</span>
+        <h3>Consultoria de Busca</h3>
+        <p class="pdesc">Você diz o carro que quer, eu encontro, analiso e negocio.</p>
+        <div class="price"><small>R$</small>1.499<span>,00</span></div>
+        <ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>Busca pelo carro do jeito que você quer</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>Analiso quantos carros forem necessários</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>Corto o que tem problema ou preço fora da realidade</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>Negociação e acompanhamento até você pegar a chave</li></ul>
+        <button type="button" class="btn light wa-open" data-svc="Consultoria de Busca (R$ 1.499)">Quero a consultoria →</button>
       </article>
+    </div>
+    <div class="pinfo2 reveal">
+      <div class="pay">
+        <h4>Formas de pagamento</h4>
+        <div class="paychips"><span>PIX</span><span>Débito</span><span>Crédito em até <b>3x sem juros</b></span><span>4x a 6x <em>com acréscimo da operadora</em></span></div>
+      </div>
+      <div class="area">
+        <h4>Onde eu atendo</h4>
+        <p><b>Fortaleza e todo o Ceará</b>, com agendamento. Pra cidades mais distantes, pode haver acréscimo pelo deslocamento.</p>
+      </div>
     </div>
   </div>
 </section>
