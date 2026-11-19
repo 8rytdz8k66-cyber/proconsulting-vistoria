@@ -454,6 +454,70 @@
   @media(max-width:600px){.tagline{margin-bottom:30px}.tl1{font-size:31px}}
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
+
+  /* ===== VITRINE AZUL · GLASSMORPHISM ===== */
+  html body{background:#0a1f8f;color:#fff}
+  html body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(40% 35% at 12% 8%,rgba(0,214,255,.55),transparent 70%),
+      radial-gradient(38% 32% at 88% 22%,rgba(124,77,255,.55),transparent 70%),
+      radial-gradient(45% 40% at 70% 88%,rgba(0,150,255,.55),transparent 70%),
+      radial-gradient(35% 30% at 10% 70%,rgba(64,90,255,.5),transparent 70%),
+      linear-gradient(160deg,#071a7a 0%,#1638ff 42%,#0a8dff 72%,#3b1fd1 100%)}
+  html body section,html body .intro,html body .vist,html body .taos,html body .specs,html body .busca,html body #precos,html body .audience,html body .contact{background:transparent!important;color:#fff;
+    --texto:rgba(255,255,255,.78);--preto:#fff;--cinza:rgba(255,255,255,.1);--cinza-2:rgba(255,255,255,.3)}
+  html body .sep,html body .intro .stripe{display:none}
+  html body h2{color:#fff}
+  html body section .lead{color:rgba(255,255,255,.82)}
+  html body section .lead b{color:#fff}
+  html body section .eyebrow{color:#bfe6ff!important}
+  html body header.top,
+  html body .pcard-in,html body .vcard,html body .bstep,html body .card,html body .aud div,
+  html body .plan,html body .pinfo2 > div,html body .tpanel,html body .stage,html body .receive,
+  html body .contact .inner,html body .vimg figcaption,html body .values span{
+    background:rgba(255,255,255,.15)!important;
+    -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.3)!important;
+    box-shadow:0 8px 32px rgba(6,18,90,.28)!important;
+    color:#fff}
+  html body header.top{border-width:0 0 1px 0!important;box-shadow:0 4px 24px rgba(6,18,90,.2)!important}
+  html body header.top nav a{opacity:.9}
+  html body header.top nav a.on{color:#fff;opacity:1;text-decoration:underline;text-underline-offset:6px}
+  html body .pcard{padding:0;background:none}
+  html body .pcard-in{border-radius:22px}
+  html body .vcard,html body .bstep,html body .card,html body .aud div,html body .plan,html body .tpanel,html body .stage,html body .receive,html body .pinfo2 > div{border-radius:20px}
+  html body .vcard,html body .bstep,html body .card,html body .aud div,html body .plan{transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s,box-shadow .3s}
+  html body .vcard:hover,html body .bstep:hover,html body .card:hover,html body .aud div:hover,html body .plan:hover{transform:translateY(-5px);background:rgba(255,255,255,.22)!important;box-shadow:0 18px 44px rgba(6,18,90,.38)!important}
+  html body .plan.dark,html body .bstep.hl{background:rgba(255,255,255,.24)!important;border-color:rgba(255,255,255,.55)!important}
+  html body .bstep .k{color:#9fdcff}
+  html body .bstep.hl .k{color:#fff}
+  html body .bstep p,html body .aud span{color:rgba(255,255,255,.8)}
+  html body .ptag{color:#fff!important;background:rgba(255,255,255,.2)!important}
+  html body .plan li i{background:rgba(255,255,255,.2)!important;color:#fff!important}
+  html body .paychips span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:#fff}
+  html body .paychips em{color:rgba(255,255,255,.7)}
+  html body .pinfo2 h4{color:#bfe6ff}
+  html body .card li:before{background:#9fdcff}
+  html body .vcard li:before,html body .tpanel li:before{color:#9fdcff}
+  html body .tpanel li{background:rgba(255,255,255,.1)}
+  html body .tp-nav button{border-color:rgba(255,255,255,.35);color:#fff}
+  html body .tp-nav button:hover{background:rgba(255,255,255,.15);color:#fff}
+  html body .model{color:#fff!important;border-color:rgba(255,255,255,.4)!important}
+  html body .tour-top .views{background:rgba(255,255,255,.15)!important;border:1px solid rgba(255,255,255,.3)!important;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+  html body .tour-top .vbtn{color:rgba(255,255,255,.85)}
+  html body .tour-top .vbtn.on{background:#fff;color:#0e1f9e}
+  html body .tv{border:1px solid rgba(255,255,255,.3)!important}
+  html body .tchip{border-color:rgba(255,255,255,.3)!important;color:#fff!important;background:rgba(255,255,255,.08)}
+  html body .tchip.on{background:#fff!important;border-color:#fff!important;color:#0e1f9e!important}
+  html body .thumb.on{border-color:#fff}
+  html body .receive li{background:rgba(255,255,255,.1)}
+  html body .vimg{border:1px solid rgba(255,255,255,.3);box-shadow:0 30px 70px -25px rgba(6,18,90,.55)}
+  html body .vist .promise{border-left-color:#9fdcff}
+  html body .audience .values em{color:rgba(255,255,255,.75)}
+  html body section .btn.primary{background:#fff;color:#0e1f9e;box-shadow:0 10px 30px -10px rgba(6,18,90,.5)}
+  html body section .btn.primary:hover{background:#e6f0ff}
+  html body .progress{background:linear-gradient(90deg,#9fdcff,#fff)}
+  html body footer{background:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.8)}
 </style>
 </head>
 <body>
